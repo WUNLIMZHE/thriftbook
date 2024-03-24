@@ -1,0 +1,13 @@
+form{
+  display: flex;
+  margin: 0;
+}
+
+.text-end{
+  display: flex;
+}
+
+#home-button:hover, #about-button:hover{
+  /* This will apply the underline style when the link is hovered over */
+  text-decoration: underline;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/service.css">
+  <link rel="icon" type="image/x-icon" href="images/salary.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Food</title>
+</head>
+<body>
+  <%- include("./partials/header.ejs") %>
+  <%- include("./partials/navbar9.ejs") %>
+  <div class="blog-container">
+    <div class="filter-container">
+      <ul class="checkbox-list">
+        Sort by: 
+        <li class="checkbox-item">
+          <input data-option-ids="1" type="checkbox" id="manufacturer-input-1">
+          <label class="filter-item-name" for="manufacturer-input-1" @*="" data-originaltext="ASUS" *@="">Distance</label>
+        </li>
+        <li class="checkbox-item">
+          <input data-option-ids="2" type="checkbox" id="manufacturer-input-2">
+          <label class="filter-item-name" for="manufacturer-input-2" @*="" data-originaltext="HP" *@="">Price</label>
+        </li>
+        <li class="checkbox-item">
+          <input data-option-ids="4" type="checkbox" id="manufacturer-input-4">
+          <label class="filter-item-name" for="manufacturer-input-4" @*="" data-originaltext="LOGITECH" *@="">Sales</label>
+        </li>
+        <li class="checkbox-item">
+          <input data-option-ids="73" type="checkbox" id="manufacturer-input-73">
+          <label class="filter-item-name" for="manufacturer-input-73" @*="" data-originaltext="RAPOO" *@="">Review</label>
+        </li>
+        <li class="checkbox-item">
+          <input data-option-ids="25" type="checkbox" id="manufacturer-input-25">
+          <label class="filter-item-name" for="manufacturer-input-25" @*="" data-originaltext="RAZER" *@="">Recent</label>
+        </li>
+        <li class="checkbox-item">
+          <input data-option-ids="11" type="checkbox" id="manufacturer-input-11">
+          <label class="filter-item-name" for="manufacturer-input-11" @*="" data-originaltext="TP-LINK" *@="">Budget</label>
+          <p style="margin-left: 25px; color: lightslategrey; font-size: 20px;">Budget left: RM120.79</p>
+        </li>
+      </ul>
+    </div>
+    <div class="card" id="item-1">
+      <img src="images/coming-soon.avif" class="card-img-top" alt="...">
+      <div class="card-body">
+        <div class="item-name">Coming soon!</div>
+        <ul class="item-info">
+          <li id="price">RM xxx</li>
+          <li>
+            <span style="margin-right: 20px;">xxx sold</span>            
+            <span>
+            0.0
+            <img src="images/star.png" style="height: 30px;">
+            </span>
+          </li>
+          <li class="address" style="margin-top: 5px;">
+            <span style="margin-right: 5px;"><img src="images/pin.png" style="height: 23px;"></span>            
+            <span> <br /></span>
+          </li>
+          <div class="add-to-cart"> 
+            <a href="#" class="btn btn-primary" style="margin-top: 8px; margin-bottom: 20px;"><span><img src="images/cart.png" style="height: 23px; margin-right: 8px;"></span>I bought this</a>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <%- include("./partials/footer.ejs") %>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

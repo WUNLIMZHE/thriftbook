@@ -1,0 +1,319 @@
+*{
+  font-family: Roboto, sans-serif;
+}
+
+p{
+  margin-bottom: 0px !important;
+  font-size: calc(0.3rem + 1.2vw);
+  text-align: justify;
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.blog-container {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.blog-header {
+  padding: 30px;
+  padding-top: 10px;
+  font-size: 40px;
+  text-align: center;
+  background: #fff7f0;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+  align-items: center; /* Vertically center items */
+}
+
+.service-title{
+  margin-left: 5%;
+}
+
+.service-title p{
+  font-size: calc(2rem + 2.5vh);
+  text-align: center;
+}
+
+.navbar {
+  height: 50px;
+}
+
+.dropdown{
+  margin-right: 15px;
+}
+
+.bg-body-tertiary {
+  --bs-bg-opacity: 1;
+  background-color: black !important;
+}
+
+.blog-name{
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  padding-right: 20px;
+}
+
+/* Right column */
+.rightcolumn {
+  padding-left: 20px;
+}
+
+.firstrow{
+  grid-area: 1/1/2/-1;
+}
+
+.secondrow{
+  margin-left: 10%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text-end {
+  display: flex; /* Use flexbox to arrange items horizontally */
+  align-items: center; /* Align items vertically */
+}
+.blog-name
+.cart-button {
+  margin-left: 10px; /* Optional: Add some spacing between the dropdown and the cart button */
+}
+
+.cart-button{
+  height: 50px;
+}
+
+.checkbox-list, .filter-item-name{
+  font-size: calc(0.4rem + 3vh);
+}
+
+.checkbox-list {
+  margin-top: 20px;
+  list-style: none; /* This removes the bullet points */
+  padding: 0; /* Optional: removes default padding */
+}
+
+.checkbox-item input[type="checkbox"] {
+  transform: scale(1.5); /* Adjust the scale factor as needed */
+  margin-right: 5px; /* Optional: Add some spacing between checkbox and label */
+  margin-bottom: 5px; /* Optional: adds some spacing between items */
+}
+
+/* Fake image */
+.fakeimg {
+  width: fit-content;
+  margin: 0 auto;
+  display: block; /* Ensures the image behaves as a block element */
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+.blog-name, .blog-title{
+  font-size: calc(0.9rem + 1.5vw);
+}
+
+.blogger-username{
+  font-size: calc(0.4rem + 1.5vw);
+}
+
+.blogger-about, .blogger-title{
+  font-size: calc(0.2rem + 1.2vw);
+}
+
+.blogger-username, .blogger-title{
+  text-align: center;
+}
+
+.blog-date{
+  color: rgb(138, 137, 137);
+}
+
+.profile {
+  height: calc(0.9rem + 10vw);
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 825px) {
+  .rightcolumn {
+    padding-left: 0px;
+  }
+  .blog-name, .blog-title, .blogger-username{
+    font-size: calc(1rem + 1.7vw);
+  }
+  .profile {
+    height: calc(2rem + 10vw);
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .service-title{
+    display: flex;
+    justify-content: center;
+  }
+
+  .blog-container {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 20px;
+  }
+
+  .checkbox-list, .filter-item-name{
+    font-size: calc(0.4rem + 2vh);
+  }
+  
+  .budget-scale img {
+    max-width: 80%; /* Set a maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+@media screen and (min-width: 826px) and (max-width: 1090px) {
+  h2{
+    font-size: 20px;
+  }
+  p{
+    font-size: 20px;
+  }
+  .blog-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .checkbox-list, .filter-item-name{
+    font-size: calc(0.4rem + 2.5vh);
+  }
+
+  .budget-scale img {
+    max-width: 60%; /* Set a maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+.blog-image{
+  height: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dropdown
+
+.fakeimg img{
+  height: 100%;
+  width: 100%;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.add-post{
+  text-align: center;
+}
+
+.add-post-form{
+  display: flex;
+  justify-content: center;
+}
+
+.item-name{
+  font-size: 32px;
+  font-weight: bold;
+  min-height: 95px;
+}
+
+.item-info{
+  list-style: none;
+  font-size: 22px;
+  padding: 0;
+  margin: 0;
+}
+
+.item-info > li{
+  list-style: none;
+  margin-top: 5px;
+}
+
+#price{
+  font-weight: bold;
+}
+
+.add-to-cart{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.address{
+  color: lightslategrey;
+  font-size: 18px;
+  height: 108px; /* Set a fixed height for the address container */
+  overflow: hidden; /* Hide any overflow content */
+  display: flex; /* Use flexbox for alignment */
+}
+
+.address span {
+  display: inline-block; /* Ensure spans behave like block-level elements */
+  vertical-align: middle; /* Vertically center elements */
+}
+
+.address-container{
+  height: 72px;
+}
+
+.filter-container{
+  margin-left: 20px;
+  grid-area: 1/1/-5/2;
+}
+
+.card-body{
+  padding:0px !important;
+}
+
+.budget-scale{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}

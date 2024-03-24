@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/user-profile.css">
+  <link rel="icon" type="image/x-icon" href="images/salary.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <title>
+    <% if (locals.username){ %>
+      <%= username %>
+    <% } else{ %>
+      <h2>About Me</h2>
+    <% } %>
+  </title>
+</head>
+<body>
+  <%- include("./partials/header.ejs") %>
+  <div class="blog-container">
+    <div class="secondrow">
+      <div class="card">
+        <form action="/new-post" method="GET" class="add-post-form">
+          <button type="submit" id="home-button" class="btn w-100">
+            <p class="add-post">I would like to promote my product:<p>
+          </button>
+        </form>
+      </div>
+      <% if (locals.postTitle){ %>
+        <% for (var i = 0; i < postTitle.length; i++){ %>
+          <div class="card" id="<%= i %>">
+            <div class="text-end justify-content-between">
+              <div>
+                <p class="blog-title"><%= postTitle[i] %><p></p>
+              </div>
+              <div style="display: flex;">
+                <form action="/edit-post" method="POST">
+                  <!-- Hidden input field to pass the value of 'i' -->
+                  <input type="hidden" name="postId" value="<%= i %>">
+                  <button type="submit" id="home-button" class="btn" style="color: blue">Edit</button>
+                </form>
+                <form action="/delete" method="POST" onsubmit="return confirmDelete();">
+                  <!-- Hidden input field to pass the value of 'i' -->
+                  <input type="hidden" name="postId" value="<%= i %>">
+                  <button type="submit" id="about-button" class="btn" style="color: red">Delete</button>
+                </form>
+              </div>
+            </div>
+            <p class="blog-date"><%= postDate[i] %><p>
+            <p>
+              Search keyword: <%- htmlDisplay(keyword[i]) %>
+            </p>
+            <p>
+              Price: <%- htmlDisplay(price[i]) %>
+            </p>
+          </div>
+        <% } %>
+      <% } %>
+    </div>
+
+    <div class="rightcolumn">
+      <div class="card">
+        <div class="blog-header">
+          <form action="/edit-profile" method="GET">
+            <button type="submit" id="home-button" class="btn" style="color:blue; margin: 0 auto;">Edit Profile</button>
+          </form>
+          <p class="blogger-title">About the user:</p>
+          <% if (locals.blogName){ %>
+            <h2><%= blogName %></h2>
+          <% } else if (locals.username){ %>
+            <h2><%= username %></h2>
+          <% } else{ %>
+            <h2>About Me</h2>
+          <% } %>
+        </div>
+        <div>
+          <% if (locals.profilePic){ %>
+            <img class="profile" src=<%=profilePic%> alt="profile picture">
+          <% } else{ %>
+            <img class="profile" src="images/default-profile.jpg" alt="default profile picture">
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%- include("./partials/footer.ejs") %>
+  <script src="script/delete-post.js"></script>
+</body>
+</html>
+
+

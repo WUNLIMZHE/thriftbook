@@ -1,0 +1,177 @@
+*{
+  font-family: Roboto, sans-serif;
+}
+
+p{
+  margin-bottom: 0px !important;
+  font-size: calc(0.3rem + 1.2vw);
+  text-align: justify;
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 0.6fr 8fr;
+}
+
+.blog-container {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.blog-header {
+  padding: 30px;
+  padding-top: 10px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+.blog-name{
+  text-align: center;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  padding-right: 20px;
+}
+
+/* Right column */
+.rightcolumn {
+  padding-left: 20px;
+}
+
+.firstrow{
+  grid-area: 1/1/2/3;
+}
+
+/* Fake image */
+.fakeimg {
+  width: auto;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+.blog-name, .blog-title{
+  font-size: calc(0.9rem + 1.5vw);
+}
+
+.blogger-username{
+  font-size: calc(0.4rem + 1.5vw);
+}
+
+.blogger-about, .blogger-title{
+  font-size: calc(0.2rem + 1.2vw);
+}
+
+.blogger-username, .blogger-title{
+  text-align: center;
+}
+
+.blog-date{
+  color: rgb(138, 137, 137);
+}
+
+.profile {
+  height: calc(0.9rem + 10vw);
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .blog-container {
+    display: grid;
+    grid-template-columns:1fr;
+  grid-template-rows: auto auto auto;
+  }
+  .firstrow{
+    grid-area: 1/1/2/2;
+  }
+  .rightcolumn {
+    padding-left: 0px;
+  }
+  .blog-name, .blog-title, .blogger-username{
+    font-size: calc(1rem + 1.7vw);
+  }
+  .profile {
+    height: calc(2rem + 10vw);
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .blogger-username{
+    font-size: calc(1.2rem + 1.5vw);
+  }
+  
+  .blogger-about, .blogger-title{
+    font-size: calc(0.5rem + 1.2vw);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  h2{
+    font-size: 20px;
+  }
+  p{
+    font-size: 20px;
+  }
+}
+
+.blog-image{
+  height: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fakeimg img{
+  height: 100%;
+  width: 100%;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.add-post{
+  text-align: center;
+}
+
+.add-post-form{
+  display: flex;
+  justify-content: center;
+}

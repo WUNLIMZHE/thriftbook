@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="icon" type="image/x-icon" href="images/salary.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body style="background-color: #f1f1f1;">
+  <div class="firstrow pt-3 m-0">
+    <div class="blog-header">
+      <div class="service-title">
+        <p class="blog-name">Electronics</p>
+      </div>
+      <div class="text-end">
+        <nav class="navbar">
+          <div class="container-fluid">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" value="refrigerator">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+        <div class="dropdown">
+          <a class="btn btn-info dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <form action="/food" method="GET">
+                <button type="submit" class="dropdown-item" style="cursor: pointer; font-size: 16px;">Food</button>
+              </form>
+            </li>
+            <li>
+              <form action="/groceries" method="GET">
+                <button type="submit" class="dropdown-item" style="cursor: pointer; font-size: 16px;">Groceries</button>
+              </form>
+            </li>
+            <li>
+              <form action="/transportation" method="GET">
+                <button type="submit" class="dropdown-item" style="cursor: pointer; font-size: 16px;">Transportation</button>
+              </form>
+            </li>
+            <li>
+              <form action="/clothing" method="GET">
+                <button type="submit" class="dropdown-item" style="cursor: pointer; font-size: 16px;">Clothing</button>
+              </form>
+            </li>
+            <li>
+              <form action="/electronics" method="GET">
+                <button type="submit" class="dropdown-item" style="cursor: pointer; font-size: 16px;">Electronics</button>
+              </form>
+            </li>
+            <li>
+              <form action="/books-and-stationery" method="GET">
+                <button type="submit" class="dropdown-item" style="cursor: pointer; font-size: 16px;">Books & Stationery</button>
+              </form>
+            </li>
+            <li>
+              <form action="/entertainment" method="GET">
+                <button type="submit" class="dropdown-item" style="cursor: pointer; font-size: 16px;">Entertainment</button>
+              </form>
+            </li>
+            <li>
+              <form action="/home-and-living" method="GET">
+                <button type="submit" class="dropdown-item" style="cursor: pointer; font-size: 16px;">Home & Living</button>
+              </form>
+            </li>
+            <li>
+              <form action="/health-and-fitness" method="GET">
+                <button type="submit" class="dropdown-item" style="cursor: pointer; font-size: 16px;">Health & Fitness</button>
+              </form>
+            </li>
+            <li>
+              <form action="/jobs" method="GET">
+                <button type="submit" class="dropdown-item" style="cursor: pointer; font-size: 16px;">Jobs</button>
+              </form>
+            </li>
+            <li>
+              <form action="/second-hand" method="GET">
+                <button type="submit" class="dropdown-item" style="cursor: pointer; font-size: 16px;">Second-hand</button>
+              </form>
+            </li>
+          </ul>
+        </div>        
+        <div>
+          <a href="/cart" method="GET">
+            <img class="cart-button" src="images/cart-button.png">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="budget-scale">
+    <img src="images/budget-scale.png" alt="budget scale">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
